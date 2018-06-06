@@ -1,0 +1,23 @@
+{
+  "name": "softdog",
+  "version": "0.1.0",
+  "description": "For safety, confuse string in client and disabuse in server",
+  "keywords": [
+    "string",
+    "confuse",
+    "disabuse"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "maqing01",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maqing01/softdog.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.1.0"
+  }
+}
