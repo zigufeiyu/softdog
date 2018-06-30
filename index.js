@@ -14,14 +14,13 @@
 })(typeof window !== "undefined" ? window : this, function () {
     return function (str, sign) {
         if (!str || typeof str !== 'string') {
-            throw new Error("param str error");
+            return '';
         }
-        if (sign !== 1 && sign !== -1) {
-            throw new Error("param sign error");
+        if (sign !== 1 && sign !== -1) { // 1加密 -1解密
+            throw new Error("param sign must be 1 or -1 !");
         }
         var newStr = '';
-        strLen = str.length;
-        for (var i = 0; i < strLen; i++) {
+        for (var i = 0; i < str.length; i++) {
             newStr += String.fromCharCode(str.charCodeAt(i) + sign * 2)
         }
         return newStr;

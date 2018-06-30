@@ -2,18 +2,13 @@ var softdog = require('../dist/index');
 
 describe("softdog", () => {
     it("!str is true or str's type not string", () => {
-        var noStrFun = () => {
-            softdog()
-        }
-        var emptyStrFun = () => {
-            softdog('')
-        }
-        var invalidTypeFun = () => {
-            softdog(true)
-        }
-        expect(noStrFun).toThrow("param str error")
-        expect(emptyStrFun).toThrow("param str error")
-        expect(invalidTypeFun).toThrow("param str error")
+        var noStrFun = () => softdog()
+        var emptyStrFun = () =>  softdog('')
+        var invalidTypeFun = () => softdog(true)
+
+        expect(noStrFun()).toBe("")
+        expect(emptyStrFun()).toBe("")
+        expect(invalidTypeFun()).toBe("")
     })
     it("sign not equal 1 or -1", () => {
         var noSignFun = () => {
@@ -22,8 +17,8 @@ describe("softdog", () => {
         var invalidSignFun = () => {
             softdog("123456", 0)
         }
-        expect(noSignFun).toThrow("param sign error")
-        expect(invalidSignFun).toThrow("param sign error")
+        expect(noSignFun).toThrow("param sign must be 1 or -1 !")
+        expect(invalidSignFun).toThrow("param sign must be 1 or -1 !")
     })
     it("valid operation", () => {
         expect(softdog("123abc", 1)).toBe("345cde");
