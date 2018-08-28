@@ -1,6 +1,6 @@
 {
   "name": "softdog",
-  "version": "0.2.0",
+  "version": "1.0.1",
   "description": "For safety, confuse string in client and disabuse in server",
   "keywords": [
     "string",
@@ -10,7 +10,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "uglifyjs ./index.js -mo ./dist/index.js"
+    "build": "uglifyjs ./src/index.js -mo ./dist/index.js",
+    "typescript": "tsc"
   },
   "author": "maqing01",
   "repository": {
@@ -19,6 +20,8 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "jest": "^23.1.0"
+    "jest": "^23.1.0",
+    "typescript": "^3.0.1",
+    "uglify-js": "^3.4.8"
   }
 }

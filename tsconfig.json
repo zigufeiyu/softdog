@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "umd",
+        "target": "es5",
+        "sourceMap": false
+    },
+    "files": [
+        "./src/index.ts"
+    ]
+}
