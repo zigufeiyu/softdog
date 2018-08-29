@@ -1,6 +1,6 @@
 {
   "name": "softdog",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "For safety, confuse string in client and disabuse in server",
   "keywords": [
     "string",

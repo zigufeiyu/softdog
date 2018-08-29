@@ -12,7 +12,7 @@
 * 客户端加密，服务器端解密
 
 ```javascript
-var softdog = require("../dist/index");
+var softdog = require("softdog");
 
 var input = {
     type: "password", 
