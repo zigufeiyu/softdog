@@ -14,7 +14,7 @@ interface ConfuseFunc {
 }
 
 // 输出接口 —— 类型别名
-type Softdog = {
+interface Softdog {
     encrypt: ConfuseFunc;
     decrypt: ConfuseFunc;
 }
