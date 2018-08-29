@@ -16,5 +16,8 @@ type Softdog = {
     decrypt: ConfuseFunc;
 }
 
+// 声明默认对象
+declare let softdog: Softdog;
+
 // 导出默认对象
-export = Softdog;
+export = softdog;
