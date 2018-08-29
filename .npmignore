@@ -1,3 +1,7 @@
 src
-example
+__tests__
+.vscode
+coverage
 node_modules
+.travis.yml
+.gitignore

@@ -6,11 +6,11 @@ var input = {
 }
 
 // 客户端加密
-var client2serverStr = softdog(input.value, 1);
+var client2serverStr = softdog.encrypt(input.value);
 console.log(client2serverStr);
 
 // 服务器端解密
-var rawStr = softdog(client2serverStr, -1);
+var rawStr = softdog.decrypt(client2serverStr);
 console.log(rawStr);
 
 // 结果校验

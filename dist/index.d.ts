@@ -1,8 +1,13 @@
-// 类型别名
-type Sign = 1 | -1;
+// 函数接口
+interface ConfuseFunc {
+    (str: string): string;
+}
 
-// 声明默认函数
-declare function softdog(str: string, sign: Sign): string | never;
+// 输出接口 —— 类型别名
+type Softdog = {
+    encrypt: ConfuseFunc;
+    decrypt: ConfuseFunc;
+}
 
 // 导出默认对象
-export = softdog;
+export = Softdog;

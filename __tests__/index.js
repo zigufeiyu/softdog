@@ -2,26 +2,22 @@ var softdog = require('../dist/index');
 
 describe("softdog", () => {
     it("!str is true or str's type not string", () => {
-        var noStrFun = () => softdog()
-        var emptyStrFun = () =>  softdog('')
-        var invalidTypeFun = () => softdog(true)
+        var noStrFun1 = () => softdog.encrypt()
+        var noStrFun2 = () => softdog.decrypt()
+        var emptyStrFun1 = () => softdog.encrypt('')
+        var emptyStrFun2 = () => softdog.decrypt('')
+        var invalidTypeFun1 = () => softdog.encrypt(true)
+        var invalidTypeFun2 = () => softdog.decrypt(true)
 
-        expect(noStrFun()).toBe("")
-        expect(emptyStrFun()).toBe("")
-        expect(invalidTypeFun()).toBe("")
-    })
-    it("sign not equal 1 or -1", () => {
-        var noSignFun = () => {
-            softdog("123456")
-        }
-        var invalidSignFun = () => {
-            softdog("123456", 0)
-        }
-        expect(noSignFun).toThrow("param sign must be 1 or -1 !")
-        expect(invalidSignFun).toThrow("param sign must be 1 or -1 !")
+        expect(noStrFun1()).toBe("")
+        expect(noStrFun2()).toBe("")
+        expect(emptyStrFun1()).toBe("")
+        expect(emptyStrFun2()).toBe("")
+        expect(invalidTypeFun1()).toBe("")
+        expect(invalidTypeFun2()).toBe("")
     })
     it("valid operation", () => {
-        expect(softdog("123abc", 1)).toBe("345cde");
-        expect(softdog("345cde", -1)).toBe("123abc");
+        expect(softdog.encrypt("123abc")).toBe("345cde");
+        expect(softdog.decrypt("345cde")).toBe("123abc");
     })
 })
