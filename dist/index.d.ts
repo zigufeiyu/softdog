@@ -5,12 +5,10 @@
  * @method decrypt  ----------  字符串解密
  */
 
-// 函数接口
-interface ConfuseFunc {
-    (str: string): string;
-}
+// 类型别名
+type ConfuseFunc = (str: string) => string;
 
-// 输出接口 —— 类型别名
+// 输出接口 
 interface Softdog {
     encrypt: ConfuseFunc;
     decrypt: ConfuseFunc;
