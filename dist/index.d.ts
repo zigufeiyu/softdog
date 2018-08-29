@@ -1,3 +1,10 @@
+/*** 
+ * @module {Object} softdog 简单的字符串加密|解密，防止密码提交拦截
+ * @interface Softdog
+ * @method encrypt  ----------  字符串加密
+ * @method decrypt  ----------  字符串解密
+ */
+
 // 函数接口
 interface ConfuseFunc {
     (str: string): string;
